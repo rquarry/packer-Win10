@@ -57,6 +57,7 @@
                         </MetaData> -->
                         <MetaData wcm:action="add">
                             <Key>/IMAGE/NAME</Key>
+                            <!-- The value here is what actaully displays in the install GUI and depends on what image you are using. Can uncomment the above "mcm:action" section as an alternate -->
                             <Value>Windows 10 Pro</Value>
                         </MetaData>
                     </InstallFrom>
