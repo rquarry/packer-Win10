@@ -48,7 +48,7 @@ The URL can also be specified as a local host location using a pre-downloaded im
 ```json
 {
   "variables": {
-      "iso_url": ""iso_url": "../../Downloads/Win10_21H1_English_x64.iso""
+      "iso_url": "../../Downloads/Win10_21H1_English_x64.iso"
 }
 ```
 
