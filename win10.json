@@ -2,13 +2,13 @@
     "variables": {
       "boot_wait": "5s",
       "disk_size": "40960",
-      "iso_checksum": "D5B2F95E3DD658517FE7C14DF4F36DE633CA4845",
-      "iso_url": "http://cdn.digiboy.ir/?b=dlir-s3&f=SW_DVD5_WIN_ENT_LTSC_2019_64-bit_English_MLF_X21-96425.ISO",
+      "iso_checksum": "6911E839448FA999B07C321FC70E7408FE122214F5C4E80A9CCC64D22D0D85EA",
+      "iso_url": "../../Downloads/Win10_21H1_English_x64.iso",
       "memsize": "4092",
       "numvcpus": "2",
-      "vm_name": "Win10_1809",
+      "vm_name": "Win10_Temp",
       "winrm_password" : "packer",
-      "winrm_username" : "Administrator"
+      "winrm_username" : "Administrator",
     },
     "builders": [
         {
@@ -41,14 +41,13 @@
         },
         {
             "type": "virtualbox-iso",
-            "guest_os_type": "Windows2016_64",
+            "guest_os_type": "Windows10_64",
             "vm_name": "{{user `vm_name`}}",
             "iso_url": "{{user `iso_url`}}",
             "iso_checksum": "{{user `iso_checksum`}}",
-            "guest_additions_mode": "disable",
             "headless": false,
             "gfx_controller": "vboxsvga",
-            "gfx_vram_size": "32",
+            "gfx_vram_size": "48",
             "boot_wait": "{{user `boot_wait`}}",
             "disk_size": "{{user `disk_size`}}",
             "communicator":"winrm",
@@ -62,7 +61,8 @@
             "shutdown_timeout": "30m",
             "vboxmanage": [
               ["modifyvm", "{{.Name}}", "--memory", "{{user `memsize`}}"],
-              ["modifyvm", "{{.Name}}", "--cpus", "{{user `numvcpus`}}"]
+              ["modifyvm", "{{.Name}}", "--cpus", "{{user `numvcpus`}}"],
+              ["modifyvm", "{{.Name}}", "--vrde", "off"]
             ]
         }
     ],
