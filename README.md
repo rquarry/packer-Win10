@@ -43,7 +43,7 @@ You can change the URL to one closer to your build server. To do so change the *
       "iso_url": "http://cdn.digiboy.ir/?b=dlir-s3&f=SW_DVD5_WIN_ENT_LTSC_2019_64-bit_English_MLF_X21-96425.ISO"
 }
 ```
-The URL can also be specified as a local host location using a pre-downloaded image
+The URL can also be specified as a local host location using a pre-downloaded image (make sure to update **iso_checksum**)
 
 ```json
 {
@@ -69,6 +69,8 @@ To set the input/user locale and timezone according to your preferences edit the
     </component>
 </settings>
 ```
+## Virtualbox Additions
+The original author used ```virtualbox-guest-additions.ps1``` to download the latest version from the virtualbox website and install it on the VM. This repo has been changed to leverage Packer's automatic upload of the hosts version of this file, so no conflicts arise. The powershell script comments can be undone to revert back if needed.
 
 ## Default credentials
 
