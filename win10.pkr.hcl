@@ -118,7 +118,7 @@ build {
   }
   
   provisioner "powershell" {
-    scripts = [""scripts/win-update.ps1"]
+    scripts = ["scripts/win-update.ps1"]
   }
     
   provisioner "windows-restart" {
@@ -126,10 +126,8 @@ build {
   }
   
   provisioner "powershell" {
-    scripts = [""scripts/win-update.ps1"]
+    scripts = ["scripts/win-update.ps1"]
   }
-  
-  
 
   provisioner "powershell" {
     pause_before = "1m0s"
