@@ -31,7 +31,7 @@ variable "numvcpus" {
 
 variable "vm_name" {
   type    = string
-  default = "Win10_Temp"
+  default = "packer_Win10"
 }
 
 variable "winrm_password" {
