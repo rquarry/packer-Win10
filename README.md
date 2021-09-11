@@ -44,7 +44,7 @@ By default the .iso of Windows 10 is pulled from the local HDD. This can be chan
 
 To set the input/user locale and timezone according to your preferences edit the following file:
 
-* ".\packer-Win2019\scripts\autounattend.xml"
+* ".\packer-Win2010\scripts\autounattend.xml"
 
 ```xml
 <settings pass="specialize">
