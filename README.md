@@ -1,6 +1,6 @@
 # packer-Win10-VDI
 
-## What is repo ?
+## What is this?
 
 - A set of configuration files used to build Windows 10 virtual machine images using [Packer](https://www.packer.io/) for VMware Workstation and Oracle VirtualBox.
 - A [template pipeline](https://www.packer.io/guides/packer-on-cicd/pipelineing-builds) that uses the corresponding Windows 10 VM to build a VM for use with the U.S. Coast Guard CAC enabled infrastructure such as VDI and CG Portal.  
@@ -19,13 +19,13 @@
 To create a Windows 10 VM image using VMware Workstation use the following commands:
 ```sh
 cd c:\packer-Win10
-packer build -only=vmware-iso win10.json
+packer build -only=vmware-iso win10.pkr.hcl
 ```
 
 To create a Windows 10 VM image using Oracle VM VirtualBox use the following commands:
 ```sh
 cd c:\packer-Win10
-packer build -only=virtualbox-iso win10.json
+packer build -only=virtualbox-iso win10.pkr.hcl
 ```
 
 *If you omit the keyword "-only=" images for both Workstation and Virtualbox will be created.*
