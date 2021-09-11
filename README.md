@@ -30,7 +30,12 @@ packer build -only=virtualbox-iso win10.pkr.hcl
 
 *If you omit the keyword "-only=" images for both Workstation and Virtualbox will be created.*
 
-By default the .iso of Windows 10 is pulled from the local HDD. This can be changed to a URL using the **"iso_url"** parameter in the **"variables"** section of the ```win10.pkr.hcl``` file.
+To create a VM with software to access USCG CAC enabled infrastructure:
+* Edit ```http_directory``` in ```vdi_build.pck.hcl``` to refelect the host location with the downloaded archive of requesite VDI files mentioned above. 
+* Run ``` packer build vdi_build.pkr.hcl```
+
+## Notes:
+* By default the pre-downloaded .iso of Windows 10 is pulled from the local HDD. This can be changed to a URL using the **"iso_url"** parameter in the **"variables"** section of the ```win10.pkr.hcl``` file.
 
 ```json
 {
@@ -38,7 +43,7 @@ By default the .iso of Windows 10 is pulled from the local HDD. This can be chan
       "iso_url": "http://cdn.digiboy.ir/?b=dlir-s3&f=SW_DVD5_WIN_ENT_LTSC_2019_64-bit_English_MLF_X21-96425.ISO"
 }
 ```
-
+* The packer legacy packer json templates are include for reference. This repo intends to use the more updated [HCL2 template format](https://www.packer.io/docs/templates)
 
 ## Configuring Input/User Locale & Timezone
 
