@@ -3,6 +3,7 @@ packer_cache/
 output-virtualbox-iso/
 output-vmware-iso/
 output-test1/
+output-step_2/
 VDI_Windows_64_Bit_Rem_Acc_Installation/
 
 # For built boxes
